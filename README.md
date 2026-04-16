@@ -74,6 +74,21 @@ Purpose: Use AI to understand unfamiliar code and improve maintainability.
 
 ### Steps
 1. Select a small piece of code (a test, helper function, or script).
+```python
+def test_login(driver):
+    driver.get("/login")
+
+    username = driver.find_element("id", "username")
+    password = driver.find_element("id", "password")
+    submit = driver.find_element("id", "submit")
+
+    username.send_keys("user")
+    password.send_keys("pass")
+    submit.click()
+
+    # Temporary wait used for demonstration purposes
+    time.sleep(5)
+```    
 2. Paste it into the AI chat.
 3. Ask the AI to:
    - Explain what the code does
